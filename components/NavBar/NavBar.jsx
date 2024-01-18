@@ -67,12 +67,30 @@ const NavBar = () => {
         //End OF LEFT Section
         <div className={Style.navbar_container_right}>
           <div className={Style.navbar_container_right_discover}>
-            <p onClick={(e)=>{}}>Discover</p>
-            <div className={Style.navbar_container_right_discover_box}>
+
+            //Discover Menu
+            <p onClick={(e)=>openMenu(e)}>Discover</p>
+            {discover && (
+                <div className={Style.navbar_container_right_discover_box}>
                 <Discover/>
             </div>
+            )}
+            
             </div>  
 
+            {/* Help Center Menu */}
+            <div className={Style.navbar_container_right_help}>
+                <p onClick={(e)=>openMenu(e)}>Help Center</p>
+                {
+                    help && (
+                <div className={Style.navbar_container_right_help_box}>
+                    <HelpCenter />
+                </div>
+                    )
+                }
+            </div>
+
+                {/* Notification */}
         </div>
         </div>
         </div>
