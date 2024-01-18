@@ -14,9 +14,20 @@ import {CgMenuLeft, CgMenuRight} from "react-icons/cg";
 import Style from "./NavBar.module.css";
 import {Discover, HelpCenter, Notification, Profile, SideBar} from "./index";
 import {Button} from "../componentindex";
+import images from "../../img";
 const NavBar = () => {
-    return <div>Navigation Bar</div>;
-    
+    //USEstate comp
+    const [discover,setDiscover]=useState(false);
+    const [help, setHelp] = useState(false) ;
+    const [notification, setNotification] = useState(false);
+    const [profile,setProfile]=useState(false);
+    const [openSideMenu,setOpenSideMenu]=useState(false);
+
+
+    return (
+    <div className={Style.navbar}>
+        <div className={Style.navbar_contain}></div</</div>
+    )
 };
 
 export default NavBar;
