@@ -16,7 +16,7 @@ import {Discover, HelpCenter, Notification, Profile, SideBar} from "./index";
 import {Button} from "../componentindex";
 import images from "../../img";
 const NavBar = () => {
-    //USEstate comp
+    //USEstate component
     const [discover,setDiscover]=useState(false);
     const [help, setHelp] = useState(false) ;
     const [notification, setNotification] = useState(false);
@@ -43,7 +43,35 @@ const NavBar = () => {
             setProfile(false);
         }
     };
+    const openNotification = ()=>{
+        if(!notification){
+            setNotification(true);
+            setDiscover(false);
+            setHelp(false);
+            setProfile(false);
+        } else{
+            setNotification(false);
+        }
+    };
 
+    const openSideBar = ()=> {
+        if(!openSideBar){
+            setOpenSideMenu(true);
+        } else {
+            setOpenSideMenu(false);
+        }
+    };
+
+    const openProfile =() =>{
+    if(!profile){
+        setProfile(true);
+        setHelp(false);
+        setDiscover(false);
+        setNotification(false);
+    } else {
+        setProfile(false);
+    }
+    };
     return (
     <div className={Style.navbar}>
         <div className={Style.navbar_container}>
@@ -91,8 +119,54 @@ const NavBar = () => {
             </div>
 
                 {/* Notification */}
+                <div className={Style.navbar_container_right_notify}>
+                    <MdNotification 
+                      className={Style.notify} 
+                      onClick={()=> openNotification}
+                    />
+                    {notification && <Notification/>}
+                </div>
+
+                {/* CREATE BUTTON SECTION */}
+                <div className={Style.navbar_container_right_button}>
+                    <Button btntext="Create"/>
+                </div>
+
+                {/* USER PROFILE  */}
+                <div className={Style.navbar_container_right_profile_box}>
+                    <div className={Style.navbar_container_right_profile}>
+                        <Image
+                        src={images.user1}
+                        alt="Profile"
+                        width={40}
+                        height={40}
+                        onClick={()=> openProfile()}
+                        className={Style.navbar_container_right_profile}
+                        />
+
+                        {profile && <Profile />}
+                    </div>
+                </div>
+
+                {/* Menu Button   */}
+
+                <div className={Style.navbar_container_right_menuBtn}>
+                    <CgMenuRight
+                    className={Style.menuIcon}
+                    onClick={()=>openSideBar()}
+                    />
+                </div>
         </div>
         </div>
+
+        {/* Sidebar Component  */}
+        {
+            openSideMenu && (
+                <div className={Style.SideBar}>
+                    <SideBar setOpenSideMenu={setOpenSideMenu}/>
+                </div>
+            )
+        }
         </div>
     );
 };
