@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 //----Import Icon
 
-import {MdNotification} from "react-icons/md";
+import {MdNotifications} from "react-icons/md";
 import {BsSearch} from "react-icons/bs";
 import {CgMenuLeft, CgMenuRight} from "react-icons/cg";
 
@@ -13,7 +13,7 @@ import {CgMenuLeft, CgMenuRight} from "react-icons/cg";
 // INTERNAL IMPORT
 import Style from "./NavBar.module.css";
 import {Discover, HelpCenter, Notification, Profile, SideBar} from "./index";
-import {Button} from "../componentindex";
+import {Button} from "../componentsindex";
 import images from "../../img";
 const NavBar = () => {
     // USEstate component
@@ -54,13 +54,7 @@ const NavBar = () => {
         }
     };
 
-    const openSideBar = ()=> {
-        if(!openSideMenu){
-            setOpenSideMenu(true);
-        } else {
-            setOpenSideMenu(false);
-        }
-    };
+    
 
     const openProfile =() =>{
     if(!profile){
@@ -72,6 +66,15 @@ const NavBar = () => {
         setProfile(false);
     }
     };
+
+    const openSideBar = ()=> {
+        if(!openSideMenu){
+            setOpenSideMenu(true);
+        } else {
+            setOpenSideMenu(false);
+        }
+    };
+
     return (
     <div className={Style.navbar}>
         <div className={Style.navbar_container}>
@@ -120,7 +123,7 @@ const NavBar = () => {
 
                 {/* Notification */}
                 <div className={Style.navbar_container_right_notify}>
-                    <MdNotification 
+                    <MdNotifications
                       className={Style.notify} 
                       onClick={()=> openNotification}
                     />
