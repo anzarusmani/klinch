@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { GrClose } from "react_icons/gr";
+import { GrClose } from 'react-icons/gr';
 import {
     TiSocialFacebook, 
     TiSocialLinkedin,
