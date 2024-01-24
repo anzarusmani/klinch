@@ -100,3 +100,32 @@
     font-size: 2.5rem;
     cursor:pointer;
 }
+
+
+/* //Sidebar */
+
+.sideBar{
+    position: fixed;
+    top: 0;
+    width: 24rem;
+    background-color: var(--main-bg-color);
+    box-shadow:var(--box-shadow);
+    height:100vh;
+    overflow-y: auto;
+    display: none;
+    z-index: 11111;
+}
+
+.sideBar::-webkit-scrollbar{
+    display: none;
+}
+@media screen and (min-device-width:320px) and 
+(max-device-width:768px){
+
+    .navbar_container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .navbar_container_left{
+        grid-template-columns: 1fr;
+    }
+}
