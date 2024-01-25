@@ -1,3 +1,4 @@
+
 .profile{
     position: absolute;
     padding: 2rem .5rem;
@@ -36,11 +37,11 @@
     align-items: center;
     gap: 2rem;
     padding: 0rem 1.5rem;
-    transition: all .3s ease-in;
+    transition:  all .3s ease-in;
 }
 
 .profile_menu_one_item:hover{
     background-color: var(--icons-color);
-    color:var(--shadow-dark-color);
+    color: var(--shadow-dark-color);
     border-radius: .3rem;
 }
