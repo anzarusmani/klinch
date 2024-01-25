@@ -30,19 +30,19 @@ const Profile = () => {
                     <div className={Style.profile_menu_one_item}>
                         <FaUserAlt/>
                         <p>
-                            <Link href={{pathname:'.myprofile'}}>My Profile</Link>
+                            <Link href={{pathname:'/myprofile'}}>My Profile</Link>
                         </p>
                     </div>
                     <div className={Style.profile_menu_one_item}>
                         <FaRegImage/>
                         <p>
-                            <Link href={{pathname:'.myitems'}}>My Item</Link>
+                            <Link href={{pathname:'/myitems'}}>My Item</Link>
                         </p>
                     </div>
                     <div className={Style.profile_menu_one_item}>
                         <FaUserEdit/>
                         <p>
-                            <Link href={{pathname:'.editprofile'}}>Edit Profile</Link>
+                            <Link href={{pathname:'/editprofile'}}>Edit Profile</Link>
                         </p>
                     </div>
                 </div>
