@@ -125,7 +125,7 @@ const NavBar = () => {
                 <div className={Style.navbar_container_right_notify}>
                     <MdNotifications
                       className={Style.notify} 
-                      onClick={()=> openNotification}
+                      onClick={()=> openNotification()}
                     />
                     {notification && <Notification/>}
                 </div>
