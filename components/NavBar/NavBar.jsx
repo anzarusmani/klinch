@@ -132,7 +132,7 @@ const NavBar = () => {
 
                 {/* CREATE BUTTON SECTION */}
                 <div className={Style.navbar_container_right_button}>
-                    <Button btntext="Create"/>
+                    <Button btnName="Create" handleClick={()=>{}}/>
                 </div>
 
                 {/* USER PROFILE  */}
@@ -165,7 +165,7 @@ const NavBar = () => {
         {/* Sidebar Component  */}
         {
             openSideMenu && (
-                <div className={Style.SideBar}>
+                <div className={Style.sideBar}>
                     <SideBar setOpenSideMenu={setOpenSideMenu}/>
                 </div>
             )
