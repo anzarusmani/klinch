@@ -5,7 +5,6 @@ import { GrClose } from 'react-icons/gr';
 import {
     TiSocialFacebook, 
     TiSocialLinkedin,
-    TiScoialTwitter,
     TiSocialYoutube,
     TiSocialInstagram,
     TiArrowSortedDown,
