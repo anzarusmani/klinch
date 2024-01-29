@@ -12,7 +12,7 @@ const HeroSection = () => {
         <div className={Style.heroSection}>
             <div className={Style.heroSection_box}>
                 <div className={Style.heroSection_box_left}>
-                    <h1>Discover, collect, and sell NFT's 🎨</h1>
+                    <h1>Discover, collect, and sell NFTs 🎨</h1>
                     <p>Embark on your NFT journey with <strong>Klinch</strong> and
                         explore limitless possibilities in the world of digital assets
                     </p>
