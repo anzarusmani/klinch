@@ -21,7 +21,7 @@ const Service = () => {
                     <span>Step 1</span>           
                 </p>
                 <h3>Connect Wallet</h3>
-                <p> Instantly link your crypto wallet for secure and convenient NFT transactions, hassle-free.</p>
+                <p>Instantly link your crypto wallet for secure and convenient NFT transactions, hassle-free.</p>
             </div>
             <div className={Style.service_box_item}>
                 <Image
@@ -34,7 +34,7 @@ const Service = () => {
                     <span>Step 2</span>           
                 </p>
                 <h3>Filter & Discover</h3>
-                <p> Explore curated NFT collections tailored to your preferences with intuitive filtering options.</p>
+                <p>Explore curated NFT collections tailored to your preferences with intuitive filtering options.</p>
             </div>
             <div className={Style.service_box_item}>
                 <Image
@@ -47,7 +47,7 @@ const Service = () => {
                     <span>Step 3</span>           
                 </p>
                 <h3>Start Trading</h3>
-                <p> Begin your NFT journey with confidence, trading digital assets and exploring new artistic horizons effortlessly.</p>
+                <p>Begin your NFT journey with confidence, trading digital assets and exploring new artistic horizons effortlessly.</p>
             </div>
             <div className={Style.service_box_item}>
                 <Image
@@ -60,7 +60,7 @@ const Service = () => {
                     <span>Step 4</span>           
                 </p>
                 <h3>Track Portfolio</h3>
-                <p>  Stay informed and in control by effortlessly tracking your NFT portfolio's performance and value fluctuations.</p>
+                <p>Stay informed and in control by effortlessly tracking your portfolio's performance & value fluctuations.</p>
             </div>
         </div>
     </div>
