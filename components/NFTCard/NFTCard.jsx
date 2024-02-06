@@ -4,7 +4,7 @@ import { BsImages } from 'react-icons/bs';
 import Image from "next/image";
 //Internal import
 import Style from "./NFTCard.module.css";
-import images from '../..img'
+import images from '../../img'
 
 const NFTCard = () => {
     const featureArray=[1,2,3,4,5,6,7,8,];
@@ -24,7 +24,7 @@ const NFTCard = () => {
             <div className={Style.NFTCard_box}> key={i+1}
             <div ClassName={Style.NFTCard_box_img}>
                 <Image 
-                src={images.nft_image_1}
+                src={images.nft_image_2}
                 alt="NFT image"
                 width={600}
                 height={600}
