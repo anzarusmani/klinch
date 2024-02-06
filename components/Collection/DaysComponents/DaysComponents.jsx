@@ -16,7 +16,7 @@ const DaysComponents = () => {
                         alt="profile background"
                         width={500}
                         height={300}
-                        objectFit='covers'
+                        // objectFit='cover'
                         className={Style.daysComponent_box_img_img}
                     />
                 </div>
@@ -27,7 +27,7 @@ const DaysComponents = () => {
                         width={200}
                         height={200}
                         className={Style.daysComponent_box_img_1}
-                        objectFit='covers'
+                        // objectFit='cover'
                     />
                     <Image
                         src={images.creatorbackground3}
@@ -35,7 +35,7 @@ const DaysComponents = () => {
                         width={200}
                         height={200}
                         className={Style.daysComponent_box_img_2}
-                        objectFit='covers'
+                        // objectFit='cover'
                     />
                     <Image
                         src={images.creatorbackground4}
@@ -43,11 +43,11 @@ const DaysComponents = () => {
                         width={200}
                         height={200}
                         className={Style.daysComponent_box_img_3}
-                        objectFit='covers'
+                        // objectFit='cover'
                     />
                 </div>
                 <div className={Style.daysComponent_box_title}>
-                    <h2>Amzaing Collection</h2>
+                    <h2>Amazing Collection</h2>
                     <div className={Style.daysComponent_box_title_info}>
                         <div className={Style.daysComponent_box_title_info_profile}>
                             <Image
