@@ -80,3 +80,5 @@ const DaysComponents = () => {
 };
 
 export default DaysComponents;
+
+//bug fix
