@@ -40,6 +40,7 @@
 
 .FollowerTabCard_box_img_img{
     border-radius: 2rem;
+    width:20.2rem;
 }
 
 .FollowerTabCard_box_profile{
@@ -79,7 +80,7 @@
 
 .FollowerTabCard_box_info h4{
     font-size: 1rem;
-    line-height: 0;
+    line-height: 1;
 }
 
 .FollowerTabCard_box_info_following a{
