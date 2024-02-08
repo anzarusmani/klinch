@@ -35,7 +35,7 @@ const AudioCardSmall = () => {
             <LikeProfile/>
             <div>
               <small>Price</small>
-              <p>1.00 ETH</p>
+              <p>1.0 ETH</p>
             </div>
 
           </div>

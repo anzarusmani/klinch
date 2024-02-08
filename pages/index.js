@@ -11,7 +11,7 @@ const Home=()=>{
       <Service/>
       <BigNFTSlider/>
       <Title 
-        heading="Latest Audio Collection" 
+        heading="Audio Collection" 
         paragraph="Discover the Finest Selection of Featured NFTs on Klinch."
       />
       <AudioLive/>
