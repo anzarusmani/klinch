@@ -2,7 +2,7 @@ import React from 'react';
 
 //INTERNAL IMPORT
 import Style from '../styles/index.module.css'
-import { BigNFTSlider, HeroSection,Service, Subscribe, Title, Category, Filter,NFTCard, Collection, FollowerTab,AudioLive, } from '../components/componentsindex';
+import { BigNFTSlider, HeroSection,Service, Subscribe, Title, Category, Filter,NFTCard, Collection, FollowerTab, AudioLive, } from '../components/componentsindex';
 
 const Home=()=>{
   return (

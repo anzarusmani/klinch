@@ -6,9 +6,29 @@ import { TbPlayerPlay,TbPlayerPause } from 'react-icons/tb';
 //INTERNAL IMPORT 
 import Style from './AudioCard.module.css';
 import images from '../../../img';
+import LikeProfile from '../../LikeProfile/LikeProfile';
 
 
 const AudioCard = () => {
+  const [like, setLike] = useState(false);
+  const [play, setPlay] = useState(false);
+
+  const likeNft = () => {
+    if(!like){
+      setLike(true);
+    } else{
+      setLike(false);
+    }
+  };
+
+  const  playMusic = ()=>{
+    if(!play){
+      setPlay(true);
+    }else{
+      setPlay(false);
+    }
+  };
+
   return (
   <div className={Style.audioCard}>
     <div className={Style.audioCard_box}>
@@ -33,17 +53,17 @@ const AudioCard = () => {
       </div>
 
       <div className={Style.audioCard_box_player}>
-        <Image src={images.musicWave} alt="musice" width={200}
+        <Image src={images.musicWave} alt="music" width={200}
         
         />
-      <div className={Style.audioCard_box_musicPlayer} onClick={()=>{}}>
+      <div className={Style.audioCard_box_musicPlayer} onClick={()=>playMusic()}>
         {play ?(
           <div className={Style.audioCard_box_musicPlayer_icon}>
             <TbPlayerPause/>
           </div>
           ):(
             <div className={Style.audioCard_box_musicPlayer_icon}>
-              <TbPlayerPause/>
+              <TbPlayerPlay/>
             </div>
         )}
       </div>
@@ -60,6 +80,7 @@ const AudioCard = () => {
       </div>
 
       <div className={Style.audioCard_box_details_stock}>
+        <LikeProfile/>
         <small>24 in stock</small>
       </div>
     </div>
