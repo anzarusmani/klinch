@@ -4,7 +4,7 @@ import React,{useState, useEffect} from 'react';
 import Style from "../styles/author.module.css";
 import {Banner} from "../collectionPage/collectionindex"; 
 import images from "../img";
-// import {AuthorProfileCard,AuthorTaps,TabCard} from
+import {AuthorProfileCard,AuthorTaps,TabCard} from "../authorPage/componentIndex";
 
 const author = () => {
     const popularArray=[
@@ -25,7 +25,7 @@ const [ following,setFollowing]=useState(false);
 
   return (
     <div>
-      
+    
     </div>
   )
 }
