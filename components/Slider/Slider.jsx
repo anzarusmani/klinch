@@ -28,14 +28,14 @@ const Slider = () => {
   return (
     <div className={Style.slider}>
       <div className={Style.slider_box}>
-        <h2>Explore NFTs Video</h2>
+        <h2>Explore NFT Videos</h2>
         <div className={Style.slider_box_button}>
-            <p>Click on play icon & enjoy NFTs Video</p>
+            <p>Click on play icon & enjoy NFT Videos</p>
             <div className={Style.slider_box_button_btn}>
             <div className={Style.slider_box_button_btn_icon} onClick={()=>handleScroll("left")}>
-                <TiArrowLeftThick />
+                <TiArrowLeftThick/>
                 </div>
-                <div className={Style.slider_box_button_btn_icon}  onClick={()=>handleScroll("right")}>
+                <div className={Style.slider_box_button_btn_icon} onClick={()=>handleScroll("right")}>
                 <TiArrowRightThick/>
                 </div>
             </div>

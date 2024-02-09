@@ -33,7 +33,7 @@ const AudioCardSmall = () => {
           <h4>NFT music #1142</h4>
           <div className={Style.audioPlayer_box_info_box}>
             <LikeProfile/>
-            <div>
+            <div className={Style.audioPlayer_box_info_box_price}>
               <small>Price</small>
               <p>1.0 ETH</p>
             </div>

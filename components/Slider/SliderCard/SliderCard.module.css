@@ -1,42 +1,42 @@
 
 
 .sliderCard{
-    padding:1rem;
+    padding: 1rem;
 }
 
 .sliderCard_box{
-    transition:all .3s ease-in;
+    transition: all .3s ease-in;
     border-radius: 2rem;
     padding-bottom: 1rem;
 }
 
 .sliderCard_box:hover{
-    box-shadow:var(--box-shadow);
+    box-shadow: var(--box-shadow);
 
 }
 
 .sliderCard_box_img_img{
     border-radius: 2rem;
     max-width: 100%;
-    /* max-height: 100%; */
+    height: 15rem;
 }
 
 .sliderCard_box_title{
-    display:flex;
+    display: flex;
     align-items: center;
-    padding-inline:2rem;
+    padding-inline: 2rem;
     justify-content: space-between;
-    gap:1rem;
+    gap: 1rem;
 }
 
 .sliderCard_box_title p{
-    font-size:1.2rem;
+    font-size: 1.2rem;
     line-height: .5;
-    font-weight:800;
+    font-weight: 800;
 }
 
 .sliderCard_box_title_like{
-    display:flex;
+    display: flex;
     align-items: center;
     gap: .5rem;
 }
@@ -47,11 +47,11 @@
     padding-inline: 2rem;
     line-height: 0;
     margin-top: 1rem;
-    text-align:end;
+    text-align: end;
 }
 
 .sliderCard_box_price_box{
-    border:1px solid var(--icons-color);
+    border: 1px solid var(--icons-color);
     padding: .2rem 1rem;
     border-radius: .2rem;
 }
@@ -61,37 +61,36 @@
     padding: .2rem .5rem;
     border-radius: .2rem;
     
-    color:var(--main-bg-color);
+    color: var(--main-bg-color);
 }
 
 .sliderCard_box_price_box p{
-    font-size:1.3rem;
-    font-weight:700;
-    margin-top:2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 2rem;
     line-height: 0;
 }
 
 .sliderCard_box_price_time{
     align-items: flex-end;
-    display:grid;
+    display: grid;
     font-size: 0.9rem;
 }
 
 .sliderCard_box_price_time p{
-    font-size:0.8rem;
-    font-weight:700;
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
 
-@media screen and(mi-device-width:320px) and (max-device-width:375px){
+@media screen and(min-device-width:320px) and (max-device-width:375px){
 
     .sliderCard{
-        padding:.5rem;
+        padding: .5rem;
     }
 
     .sliderCard_box_title p{
         font-size: 1rem;
-
     }
 
     .sliderCard_box_price_box{
@@ -99,6 +98,6 @@
     }
 
     .sliderCard_box_price_time p{
-        font-size:1rem;
+        font-size: 1rem;
     }
 }

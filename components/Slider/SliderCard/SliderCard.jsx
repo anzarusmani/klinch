@@ -6,7 +6,7 @@ import Image from 'next/image';
 //INTERNAL IMPORT
 import Style from './SliderCard.module.css';
 import images from '../../../img';
-import { LikeProfile } from "../../LikeProfile/LikeProfile";
+// import LikeProfile from "../../LikeProfile/LikeProfile";
 const SliderCard = () => {
   return (
   <motion.div className={Style.sliderCard}>
