@@ -13,6 +13,7 @@ const SliderCard = () => {
     <div className={Style.sliderCard_box}>
       <motion.div className={Style.sliderCard_box_img}>
     <Image src={images.creatorbackground10}
+    className={Style.sliderCard_box_img_img}
     alt="slider profile"
     width={500}
     height={300}
@@ -28,7 +29,7 @@ const SliderCard = () => {
       </div>
 
       <div className={Style.sliderCard_box_price}>
-        <div className={Style.sliderCard_price_box}>
+        <div className={Style.sliderCard_box_price_box}>
           <small>Current Bid</small>
           <p>1.000 ETH</p>
         </div>

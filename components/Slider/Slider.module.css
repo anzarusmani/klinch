@@ -41,5 +41,46 @@
 
 
 .slider_box_button_btn_icon:hover{
-    background-color: var();
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+    box-shadow:var(--box-shadow);
+}
+
+.slider_box_items{
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider_box_item{
+    display: grid;
+    grid-template-columns: repeat(6,20.4rem);
+    gap:1rem;
+     padding:4rem 2rem;
+     cursor:grab;
+
+
+}
+
+
+.slider_box_item:-webkiit-scrollbar{
+    display: none;
+
+}
+
+@media screen and (max-width:35rem){
+    .slider_box h2{
+        font-size:2rem;
+    }
+    .slider_box_item{
+        overflow:auto;
+        grid-template-columns: repeat(6,95%);
+        padding:4rem 0;
+    }
+    .slider_box{
+        width:90%;
+
+    }
+    .slider_box_button_btn_icon{
+        padding: .5rem;
+    }
 }
