@@ -43,6 +43,7 @@ import musicWave from "./musiceWave.png";
 import update from "./update.png";
 import earn from "./eran.png";
 
+
 export default {
   earn,
   collection,
