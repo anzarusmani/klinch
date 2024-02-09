@@ -16,10 +16,6 @@ const Home=()=>{
       />
       <AudioLive/>
       <FollowerTab/>
-      <Title 
-        heading="Explore NFTs Video" 
-        paragraph="Click on play icon & enjoy Nfts Video"
-      />
       <Slider/>
       <Collection/>
       <Title 
