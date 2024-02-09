@@ -7,12 +7,12 @@ import Image from 'next/image';
 import Style from './SliderCard.module.css';
 import images from '../../../img';
 // import LikeProfile from "../../LikeProfile/LikeProfile";
-const SliderCard = () => {
+const SliderCard = ({el,i}) => {
   return (
   <motion.div className={Style.sliderCard}>
     <div className={Style.sliderCard_box}>
       <motion.div className={Style.sliderCard_box_img}>
-    <Image src={images.creatorbackground10}
+    <Image src={el.background}
     className={Style.sliderCard_box_img_img}
     alt="slider profile"
     width={500}
