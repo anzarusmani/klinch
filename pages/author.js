@@ -47,7 +47,7 @@ const [ following,setFollowing]=useState(false);
       <Banner bannerImage={images.creatorbackground1}/>
       <AuthorProfileCard/>
       <AuthorTaps setCollectables={setCollectables} setCreated={setCreated} setLike={setLike} setFollower={setFollower} setFollowing={setFollowing}/>
-      <AuthorNFTCardBox collectables={setCollectables} created={setCreated} like={setLike} follower={setFollower} following={setFollowing}/>
+      <AuthorNFTCardBox collectables={collectables} created={created} like={like} follower={follower} following={following}/>
       <Title heading="Popular Creators" paragraph="Click on music icon and enjoy NTF music or audio"/>
       <div className={Style.author_box}>
         {followerArray.map((el, i) => (
