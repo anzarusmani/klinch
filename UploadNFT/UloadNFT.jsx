@@ -6,7 +6,7 @@ import { TiTick } from "react-icons/ti";
 import Image from "next/image";
 
 //INTERNAL IMPORT
-import Style from "./UploadNFT.module.css";
+import Style from "./Upload.module.css";
 import formStyle from "../AccountPage/Form/Form.module.css";
 import images from "../img";
 import { Button } from "../components/componentsindex.js";
