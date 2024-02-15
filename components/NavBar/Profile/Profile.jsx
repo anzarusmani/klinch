@@ -22,7 +22,7 @@ const Profile = () => {
         />
 
         <div className={Style.profile_account_info}>
-          <p>Aditya Vikram Singh</p>
+          <p>Rahul Mahajan</p>
           <small>X038499382920203...</small>
         </div>
       </div>
