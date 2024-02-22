@@ -3,8 +3,8 @@ pragma solidity ^0.8.24;
 
 //INTERNAL IMPORT FOR NFT OPENZEPPELIN
 
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
-import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol"; // Using ERC721 standard
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "hardhat/console.sol";
 
@@ -93,7 +93,7 @@ contract NFTMarketplace is ERC721URIStorage{
         );
     }
 
-    //FUNCTION FOR RESALE TOPKEN
+    //FUNCTION FOR RESALE TOKEN
     function reSellToken(uint256 tokenId, uint256 price) public payable{
         require(idMarketItem[tokenId].owner ==msg.sender,"only item owner can perform this operation");
         require(msg.value==listingPrice,"Price must be equal to listing price ");

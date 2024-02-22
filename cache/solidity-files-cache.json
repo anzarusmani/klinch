@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\asus\\Desktop\\klinch\\contracts\\NFTMarketplace.sol": {
-      "lastModificationDate": 1708621579635,
-      "contentHash": "986c78d26811de75cc50ab9f202402f5",
+      "lastModificationDate": 1708622427553,
+      "contentHash": "009e768933b1a241bafdc2f39d577f32",
       "sourceName": "contracts/NFTMarketplace.sol",
       "solcConfig": {
         "version": "0.8.24",
