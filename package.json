@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^5.0.1",
+    "@openzeppelin/contracts": "^4.9.3",
     "ether": "^0.0.9",
     "framer-motion": "^11.0.3",
     "next": "^14.0.4",
