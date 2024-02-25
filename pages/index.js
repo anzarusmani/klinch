@@ -1,10 +1,16 @@
-import React from 'react';
+import React,{useState,useEffect,useContext} from 'react';
 
 //INTERNAL IMPORT
 import Style from '../styles/index.module.css'
 import { BigNFTSlider, HeroSection,Service, Subscribe, Title, Category, Filter,NFTCard, Collection, FollowerTab, AudioLive, Slider, Brand, Video,} from '../components/componentsindex';
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const Home=()=>{
+  const{checkContract}=useContext(NFTMarketplaceContext);
+
+  useEffect(()=>{
+    checkContract();
+  },[]);
   return (
     <div className={Style.homePage}>
       <HeroSection/>
