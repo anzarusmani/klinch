@@ -15,4 +15,4 @@ export const   NFTMarketplaceProvider = ({children}) => {
             {children}
         </NFTMarketplaceContext.Provider>
     )
-}
+};
