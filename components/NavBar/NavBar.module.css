@@ -95,6 +95,10 @@
 .navbar_container_right_profile{
     border-radius:50%;
 }
+.logo{
+    position:relative;
+    left:-5rem;
+}
 
 .navbar_container_right_menuBtn{
     display:none;
