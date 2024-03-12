@@ -98,7 +98,7 @@ const uploadToIPFS = async (file)=>{
     
 
     } catch(error){
-        console.log(Error Uploading to IPFS);
+        console.log("Error Uploading to IPFS");
     }
 }
 
@@ -120,9 +120,34 @@ const added = await client.add(data);
     }catch(error){
         console.log(error);
     }
-    }
+    
 
 };
+
+//--- createSale FUNCTION
+const createSale=async(url,formInputPrice,isReselling,id)=>{
+    try{
+
+        const price= ethers.utils.parseUnits(formInputPrice,"ether");
+        const contract=await connectingWithSmartContract()
+
+        const listingPrice=await contract.getListingPrice();
+
+        const transaction=!isReselling?await contract.createToken(url,price,{
+            value:listingPrice.toString(),
+        }):await contract.reSellToken(url,price,{
+            value:listingPrice.toString(),
+        });
+
+        await transaction.wait();
+        }catch(error){
+        console.log("error while creating sale")
+    }
+    
+};
+
+//-- FETCHNFTS FUNCTION 
+
 
 
     return (
