@@ -6,11 +6,11 @@ import { BigNFTSlider, HeroSection,Service, Subscribe, Title, Category, Filter,N
 import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const Home=()=>{
-  const{}=useContext(NFTMarketplaceContext);
+  const{checkContract}=useContext(NFTMarketplaceContext);
 
-  // useEffect(()=>{
-  //   checkContract();
-  // },[]);
+  useEffect(()=>{
+    checkContract();
+  },[]);
   return (
     <div className={Style.homePage}>
       <HeroSection/>

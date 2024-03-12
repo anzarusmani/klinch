@@ -5,8 +5,6 @@ import Router from "next/router";
 import axios from "axios";
 import {create as ipfsHttpClient} from "ipfs-http-client";
 
-const client=ipfsHttpClient("https://ipfs.infura.io:5001/api/v0");
-
 // Internal import
 import { NFTMarketplaceAddress, NFTMarketplaceABI } from './constants';
 
@@ -39,126 +37,16 @@ export const NFTMarketplaceContext = React.createContext();
 export const   NFTMarketplaceProvider = ({children}) => {
     const titleData="Discover, collect, and sell NFTs ";
 
-    // const checkContract=async()=>{
-    //     const contract=await connectingWithSmartContract();
-    //     console.log(contract);
-    // }
-
-
-//-----------USESTATE
-const [currentAccount,setCurrentAccount]=useState("");
-
-//--CHECK IF WALLET IS CONNECTED
-const checkIfWalletConnected= async()=>{
-    try{
-if(!window.ethereum) return console.log("Install MetaMask")
-
-const accounts=await window.ethereum.request({method:"eth_accounts",
-});
-
-if(accounts.length){
-    setCurrentAccount(accounts[0]);
+    const checkContract=async()=>{
+        const contract=await connectingWithSmartContract();
+        console.log(contract);
     }
-    else{
-        console.log("No account found");
-    }
-}
-    catch(error){
-        console.log("Something went wrong while connecting to wallet");
-    }
-};
-
-useEffect(()=>{
-    checkIfWalletConnected();
-},[]);
-
-//--CONNECT WALLET FUNCTION
-const connectWallet=async()=>{
-try{
-    if(!window.ethereum) return console.log("Install MetaMask")
-
-    const accounts=await window.ethereum.request({method:"eth_requestAccount",
-    });
-
-    setCurrentAccount(accounts[0]);
-    window.location.reload();
-}
-catch(error){
-    console.log("Error while connecting to wallet");
-}
-}
-
-//--UPLOAD TO IPFS FUNCTION 
-const uploadToIPFS = async (file)=>{
-    try{
-        const added=await client.add({content:file});
-        const url='https://ipfs.infura.io/ipfs/${added.path}';
-        
-        return url;
-    
-
-    } catch(error){
-        console.log("Error Uploading to IPFS");
-    }
-}
-
-//--CREATENFT FUNCTION
-const createNFT=async( formInput,fileUrl,router)=>{
-    
-        const {name,description,price}=formInput;
-
-        if(!name || !description||!price || !fileUrl)
-        return console.log("Data is Missing");
-    const data=JSON.stringify({name,description,image:fileUrl})
-
-    try{
-const added = await client.add(data);
-
-        const url='https://ipfs.infura.io/ipfs/${added.path}';
-
-        await createSale(url,price);
-    }catch(error){
-        console.log(error);
-    }
-    
-
-};
-
-//--- createSale FUNCTION
-const createSale=async(url,formInputPrice,isReselling,id)=>{
-    try{
-
-        const price= ethers.utils.parseUnits(formInputPrice,"ether");
-        const contract=await connectingWithSmartContract()
-
-        const listingPrice=await contract.getListingPrice();
-
-        const transaction=!isReselling?await contract.createToken(url,price,{
-            value:listingPrice.toString(),
-        }):await contract.reSellToken(url,price,{
-            value:listingPrice.toString(),
-        });
-
-        await transaction.wait();
-        }catch(error){
-        console.log("error while creating sale")
-    }
-    
-};
-
-//-- FETCHNFTS FUNCTION 
-
-
 
     return (
         <NFTMarketplaceContext.Provider 
         value={{
-            
-            connectWallet,
-            uploadToIPFS,
-            createNFT,
+            checkContract,
             titleData,
-            
             }}
             >
             {children}
