@@ -16,6 +16,8 @@ const author = () => {
       user: images.user1,
     },
     {
+
+      
       background: images.creatorbackground2,
       user: images.user2,
     },
